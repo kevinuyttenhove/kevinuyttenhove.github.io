@@ -14,20 +14,19 @@ const setValueFromLocalStorage = property => {
     let value = localStorage.getItem(property);
 
     //If there's no theme selected use basic theme
-    if(!value)
-    {
+    if (!value) {
         switch (property) {
-            case 'color-background': 
+            case 'color-background':
                 setValue(property, '#1a1a1a');
                 break;
-            case 'color-text-pri': 
+            case 'color-text-pri':
                 setValue(property, '#FFFDEA');
                 break;
-            case 
+            case
                 'color-text-acc': setValue(property, '#5c5c5c');
                 break;
         }
-        
+
 
     }
     setValue(property, value);
@@ -119,7 +118,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-text-acc': '#6EE2FF'
                 });
                 return;
-            
+
             case 'blues':
                 setTheme({
                     'color-background': '#2B2C56',
@@ -127,7 +126,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-text-acc': '#6677EB'
                 });
                 return;
-            
+
             case 'passion':
                 setTheme({
                     'color-background': '#f5f5f5',
@@ -135,7 +134,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-text-acc': '#8e24aa'
                 });
                 return;
-            
+
             case 'chalk':
                 setTheme({
                     'color-background': '#263238',
@@ -143,7 +142,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-text-acc': '#FF869A'
                 });
                 return;
-            
+
             case 'paper':
                 setTheme({
                     'color-background': '#F8F6F1',
@@ -151,23 +150,37 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-text-acc': '#AA9A73'
                 });
                 return;
-            
+
             case 'colormind':
-            setTheme({
-                'color-background': '#282b45',
-                'color-text-pri': '#e9e4db',
-                'color-text-acc': '#6a86c6'
-            });
-            return;
+                setTheme({
+                    'color-background': '#282b45',
+                    'color-text-pri': '#e9e4db',
+                    'color-text-acc': '#6a86c6'
+                });
+                return;
 
             case 'dark':
-            setTheme({
-                'color-background': '#1d242b',
-                'color-text-pri': '#e8ebe8',
-                'color-text-acc': '#e49246'
-            });
-            return;
+                setTheme({
+                    'color-background': '#1d242b',
+                    'color-text-pri': '#e8ebe8',
+                    'color-text-acc': '#e49246'
+                });
+            case 'usernameGF':
+                localStorage.setItem('user-name', 'Princess ❤');
+                location.reload();
+                return;
 
+            case 'usernameFriend':
+                localStorage.setItem('user-name', 'Loser');
+                location.reload();
+                return;
+
+            case 'usernameBF':
+                localStorage.setItem('user-name', 'Kevin');
+                location.reload();
+                return;
         }
     })
+
+
 }
